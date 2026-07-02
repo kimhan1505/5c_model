@@ -1,19 +1,12 @@
-# 应用机器学习: Ứng dụng Dự đoán Kết quả Học tập (PD) Streamlit Web Application
+# Ứng Dụng Huấn Luyện & Dự Báo Machine Learning (Streamlit)
 
-Ứng dụng web này được xây dựng tự động hóa và chuyển đổi quy trình từ cấu trúc Notebook huấn luyện Máy học của bạn sang một giao diện Web tương tác chuyên nghiệp sử dụng thư viện **Streamlit**.
+Ứng dụng web được xây dựng tự động từ Jupyter Notebook, cho phép người dùng cấu hình, trực quan hóa, huấn luyện và sử dụng mô hình dự báo trực tiếp trên trình duyệt.
 
-## 📌 Mô tả Ứng dụng & Mô hình Sử dụng
-- **Bài toán Machine Learning:** Phân loại nhị phân giám sát (Binary Classification).
-- **Thuật toán áp dụng:** `RandomForestClassifier` kế thừa và tối ưu tham số cấu hình chính xác từ kịch bản máy học của notebook gốc.
-- **Biến mục tiêu cần dự đoán ($y$):** Cột cột `PD` (Kết quả học tập: giá trị phân loại nhị phân 0 hoặc 1).
-- **Tập biến đặc trưng đầu vào ($X$):** Bao gồm 24 biến số khảo sát trích xuất chính xác bao gồm: `TC1` đến `TC5`, `NL1` đến `NL4`, `DK1` đến `DK5`, `V1` đến `V6`, `TS1` đến `TS4`.
+## 📝 Chú thích về mô hình
+Đoạn mã được trích xuất từ notebook `5c.csv` dừng lại ở bước chia tách dữ liệu (`train_test_split`), do đó **không có thuật toán cụ thể nào được huấn luyện trong file gốc**. Để ứng dụng có thể chạy hoàn chỉnh chức năng phân loại (`PD` là biến nhị phân), hệ thống đã lựa chọn một thuật toán phân loại phổ biến và đáng tin cậy làm mặc định: **Random Forest Classifier**.
 
-## 🛠️ Hướng dẫn cài đặt dự án
-
-### 1. Yêu cầu hệ thống
-Đảm bảo máy tính của bạn đã được cài đặt sẵn môi trường Python phiên bản (Khuyến nghị $\ge$ 3.9).
-
-### 2. Cài đặt các thư viện cần thiết
-Mở terminal tại thư mục chứa các file và thực thi lệnh sau:
-```bash
-pip install -r requirements.txt
+## 🛠️ Yêu cầu & Cài đặt
+1. Chắc chắn máy tính của bạn đã cài đặt Python 3.8+.
+2. Mở Terminal / Command Prompt và chạy lệnh sau để cài đặt các thư viện cần thiết:
+   ```bash
+   pip install -r requirements.txt
